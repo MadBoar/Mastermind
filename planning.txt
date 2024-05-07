@@ -1,0 +1,33 @@
+
+
+r g b y colors to guess
+
+ _ _ _ _4 slots to guess
+
+### Interface example
+
+#  Mastermind  #
+#   _ _ _ _    #
+#--------------#
+# | _ _ _ _ |  #
+# | _ _ _ _ |  #
+# | _ _ _ _ |  #
+# | _ _ _ _ | r#
+# | _ _ _ _ | g#
+# | _ _ _ _ | b#
+# | _ _ _ _ | y#
+#              #
+Enter your x long code:
+rrrr
+
+###
+
+### Notes
+- Min 4 rows to display r g b y options
+- Column length will be: (bottom up)
+    --idx 0 row, code length + '# ', ' #' on either side
+    --idx 1-4, '# ' + code length + ' c#' c = colour
+    --idx 5+. code length + '# ', ' #'
+    --idx guess+1, '#---#' where '-' fills available space
+    --idx guess+2, code length + '# ', ' #'
+    --idx end, '#  #' with 'Mastermind' in the middle
